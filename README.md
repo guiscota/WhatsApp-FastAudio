@@ -14,7 +14,7 @@ I'll be happy if you could provide me any feedback about the project, code, stru
 
 Email: contato@guilhermesoares.tech
 
-Connect with me on [LinkedIn]https://www.linkedin.com/in/guiscota
+Connect with me on [LinkedIn](https://www.linkedin.com/in/guiscota)
 
 In addition, you can use this project as you wish, study, make improvements or make money from it!
 
@@ -26,3 +26,6 @@ Enable developer mode in your browser
 
 Drag the folder to the extensions area to install it
 ![Alt text](screenshots/extensions.png?raw=true "Extensions")
+
+# License
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/guiscota/WhatsApp-FastAudio/blob/master/LICENSE) file for details
