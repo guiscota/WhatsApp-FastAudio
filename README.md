@@ -6,7 +6,7 @@ Small extension to control the playback speed of Whatsapp Web audios, developed 
 
 # About this project
 This project is part of a personal study inspired by the following video:
-(https://pages.github.com/)
+(https://www.youtube.com/watch?v=j0Ih1xVyKbY)
 
 In this project I will seek to make improvements and at the end I intend to publish in the Chrome Web Store
 
