@@ -1,4 +1,4 @@
-.TimeButtonOff{
+.TimeButtonOff {
     color: gray;
     font-size: 1rem;
     font-weight: bold;
@@ -6,7 +6,7 @@
     border: none;
 }
 
-.TimeButtonOn{
+.TimeButtonOn {
     color: #01DF01;
     font-size: 1rem;
     font-weight: bold;
@@ -14,6 +14,13 @@
     border: none;
 }
 
-.TimeButton:hover{
+.statusFastAudio {
+    color: rgb(110, 110, 110);
+    font-size: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.TimeButton:hover {
     color: rgb(41, 41, 41);
 }
