@@ -12,7 +12,7 @@ const interval = setInterval(() => {
 
         button.addEventListener("click", () => { //Button click event
 
-            if (typeof sessionStorage.getItem('status') !== 'undefined') {
+            if ((typeof sessionStorage.getItem('status') !== 'undefined') || (sessionStorage.getItem('status') === 0)) {
                 button.style.color = '#01DF01'; //color when active                
 
                 velocity = 1.5; //Define a velocidade da reprodução
@@ -24,7 +24,7 @@ const interval = setInterval(() => {
 
                 velocity = 1; //Define a velocidade da reprodução
 
-                sessionStorage.removeItem('status'); //Defines status desactive
+                sessionStorage.setItem('status', 0); //Defines status desactive
             }
 
             const audios = document.querySelectorAll("audio"); //Select all áudios on the page
