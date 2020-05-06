@@ -27,5 +27,11 @@ Enable developer mode in your browser
 Drag the folder to the extensions area to install it
 ![Alt text](screenshots/extensions.png?raw=true "Extensions")
 
+# Improvements
+* Change content.js using promise
+* Add functionality to turn off the function
+* Add indicator (on / off)
+* Add more audio playback speed options
+
 # License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/guiscota/WhatsApp-FastAudio/blob/master/LICENSE) file for details
