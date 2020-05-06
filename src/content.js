@@ -4,7 +4,7 @@ const interval = setInterval(() => {
 
     const header = document.querySelector("._3auIg") //where the button will be
 
-    if(header){
+    if (header) {
         console.log(header)
         clearInterval(interval)
     }
