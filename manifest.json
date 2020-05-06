@@ -1,11 +1,12 @@
 {
     "manifest_version": 2,
-    "name": "FastAudio",
+    "name": "WhatsApp FastAudio",
+    "description": "Small extension to control the playback speed of Whatsapp Web audios.",
     "version": "0.1",
     "content_scripts": [
         {
             "matches": [
-                "https://web.whatsapp.com"
+                "https://web.whatsapp.com/"
             ],
             "css": [
                 "src/style.css"

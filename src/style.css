@@ -5,3 +5,7 @@
     background-color: transparent;
     border: none;
 }
+
+.TimeButton:hover{
+    color: rgb(14, 82, 25);
+}
