@@ -6,36 +6,34 @@ const interval = setInterval(() => {
 
     if (header) { //Check if found the header
         clearInterval(interval) //stop verification
+        session['status'] = 0 //initialize with the function disabled
 
         const button = document.createElement("Button") //Create a button
         button.innerHTML = "1.5x" //This button will display "2x"
         button.classList.add("TimeButton") //Defines button class
 
         button.addEventListener("click", () => { //Button click event
-            session["status"] = 1;
+
+            if(session['status'] === 0) {
+                button.style.color = "#01DF01" //color when active
+                session["status"] = 1; //Defines status activate
+
+                velocity = 1.5 //Define a velocidade da reprodução
+            }
+            else {
+                session["status"] = 0; //Defines status desactive
+                button.style.color = "gray" //color when desactive 
+
+                velocity = 1 //Define a velocidade da reprodução        
+            }
 
             const audios = document.querySelectorAll("audio"); //Select all áudios on the page
 
             audios.forEach((audio) => { //Cycle through all audios
-                audio.playbackRate = 1.5; //Sets the audio playback speed
+                audio.playbackRate = velocity; //Sets the audio playback speed
             })
 
-            button.style.color = "#01DF01" //color when active
         })
-
-        if(session['status'] === 1) {
-            button.addEventListener("click", () => { //Button click event
-                session["status"] = 0;
-    
-                const audios = document.querySelectorAll("audio"); //Select all áudios on the page
-    
-                audios.forEach((audio) => { //Cycle through all audios
-                    audio.playbackRate = 1; //Sets the audio playback speed
-                })
-    
-                button.style.color = "gray" //color when desactive
-            })
-        }
 
         header.appendChild(button) //Add a node to the end of the header list
     }
