@@ -30,7 +30,7 @@ Drag the folder to the extensions area to install it
 # Improvements
 * Change content.js using promise
 * Add functionality to turn off the function
-* Add indicator (on / off)
+✨ Add indicator (on / off) - Implemented
 * Add more audio playback speed options
 
 # License
