@@ -8,7 +8,7 @@ const interval = setInterval(() => {
         clearInterval(interval) //stop verification
 
         const button = document.createElement("Button") //Create a button
-        button.innerHTML = "2x" //This button will display "2x"
+        button.innerHTML = "1.5x" //This button will display "2x"
         button.classList.add("TimeButton") //Defines button class
 
         button.addEventListener("click", () => { //Button click event
