@@ -17,6 +17,8 @@ const interval = setInterval(() => {
             audios.forEach((audio) => { //Cycle through all audios
                 audio.playbackRate = 1.5; //Sets the audio playback speed
             })
+
+            button.style.color = "#80FF00"
         })
 
         header.appendChild(button) //Add a node to the end of the header list
