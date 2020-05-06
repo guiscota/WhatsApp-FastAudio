@@ -9,7 +9,7 @@ const interval = setInterval(() => {
         session['status'] = 0 //initialize with the function disabled
 
         const button = document.createElement("Button") //Create a button
-        button.innerHTML = "1.5x" //This button will display "2x"
+        button.innerHTML = "1.5x" //This button will display "1.5x"
         button.classList.add("TimeButton") //Defines button class
 
         button.addEventListener("click", () => { //Button click event
