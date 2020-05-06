@@ -25,7 +25,7 @@ Enable developer mode in your browser
 ![Alt text](screenshots/extensions_browser.png?raw=true "Enable developer mode in your browser")
 
 Drag the folder to the extensions area to install it
-![Alt text](screenshots/extensions.png?raw=true "Extensions")
+![Alt text](screenshots/extension_install.png?raw=true "Extensions")
 
 # Improvements
 * Change content.js using promise
