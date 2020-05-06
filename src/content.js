@@ -7,24 +7,20 @@ const interval = setInterval(() => {
         clearInterval(interval); //stop verification        
 
         const button = document.createElement("Button"); //Create a button
-        button.innerHTML = '1.5x'; //This button will display "1.5x"
-        button.classList.add('TimeButton'); //Defines button class
+        button.innerHTML = "1.5x"; //This button will display "1.5x"
+        button.classList.add("TimeButtonOff"); //Defines button class
 
         button.addEventListener("click", () => { //Button click event
 
-            if ((typeof sessionStorage.getItem('status') !== 'undefined') || (sessionStorage.getItem('status') === 0)) {
-                button.style.color = '#01DF01'; //color when active                
+            if (button.classList.contains("TimeButtonOff")) {
+                button.classList.add("TimeButtonOn"); //color when active                
 
                 velocity = 1.5; //Define a velocidade da reprodução
-
-                sessionStorage.setItem('status', 1); //Defines status activate
             }
             else {
-                button.style.color = 'gray'; //color when desactive 000 / 2
+                button.classList.add("TimeButtonOff"); //color when active                
 
                 velocity = 1; //Define a velocidade da reprodução
-
-                sessionStorage.setItem('status', 0); //Defines status desactive
             }
 
             const audios = document.querySelectorAll("audio"); //Select all áudios on the page
