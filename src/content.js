@@ -13,23 +13,29 @@ const interval = setInterval(() => {
         button.addEventListener("click", () => { //Button click event
 
             if (button.classList.contains("TimeButtonOff")) {
+                button.classList.remove("TimeButtonOff");
                 button.classList.add("TimeButtonOn"); //color when active                
 
-                velocity = 1.5; //Define a velocidade da reprodução
+                velocity = 3; //Define a velocidade da reprodução
+
+                sessionStorage.setItem('status', 'On');
             }
             else {
+                button.classList.remove("TimeButtonOn");
                 button.classList.add("TimeButtonOff"); //color when active                
 
                 velocity = 1; //Define a velocidade da reprodução
+
+                sessionStorage.removeItem('status');
             }
 
             const audios = document.querySelectorAll("audio"); //Select all áudios on the page
 
             audios.forEach((audio) => { //Cycle through all audios
                 audio.playbackRate = velocity; //Sets the audio playback speed
-            })
+            });
 
-        })
+        });
 
         header.appendChild(button); //Add a node to the end of the header list
     }
