@@ -6,7 +6,7 @@ const interval = setInterval(() => {
 
     if (header) { //Check if found the header
         clearInterval(interval) //stop verification
-        Storage.setItem("status", 0) //initialize with the function disabled
+        localStorage.setItem('status', 0) //initialize with the function disabled
 
         const button = document.createElement("Button") //Create a button
         button.innerHTML = "1.5x" //This button will display "1.5x"
@@ -15,14 +15,14 @@ const interval = setInterval(() => {
         button.addEventListener("click", () => { //Button click event
 
             if (localStorage.getItem('status') === 0) {
-                Storage.setItem("status", 1) //Defines status activate
+                localStorage.setItem('status', 1) //Defines status activate
 
                 button.style.color = "#01DF01" //color when active                
 
                 velocity = 1.5 //Define a velocidade da reprodução
             }
             else {
-                Storage.setItem("status", 0) //Defines status desactive
+                localStorage.setItem('status', 0) //Defines status desactive
 
                 button.style.color = "gray" //color when desactive 
 
