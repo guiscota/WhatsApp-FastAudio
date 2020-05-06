@@ -18,7 +18,7 @@ const interval = setInterval(() => {
                 audio.playbackRate = 1.5; //Sets the audio playback speed
             })
 
-            button.style.color = "#80FF00"
+            button.style.color = "#01DF01"
         })
 
         header.appendChild(button) //Add a node to the end of the header list
