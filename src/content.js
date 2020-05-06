@@ -8,16 +8,34 @@ const interval = setInterval(() => {
         clearInterval(interval) //stop verification
 
         const button = document.createElement("Button") //Create a button
-        button.innerHTML = "2x" //This button will display "2x"
+        button.innerHTML = "1.5x" //This button will display "2x"
         button.classList.add("TimeButton") //Defines button class
 
         button.addEventListener("click", () => { //Button click event
+            session["status"] = 1;
+
             const audios = document.querySelectorAll("audio"); //Select all áudios on the page
 
             audios.forEach((audio) => { //Cycle through all audios
                 audio.playbackRate = 1.5; //Sets the audio playback speed
             })
+
+            button.style.color = "#01DF01" //color when active
         })
+
+        if(session['status'] === 1) {
+            button.addEventListener("click", () => { //Button click event
+                session["status"] = 0;
+    
+                const audios = document.querySelectorAll("audio"); //Select all áudios on the page
+    
+                audios.forEach((audio) => { //Cycle through all audios
+                    audio.playbackRate = 1; //Sets the audio playback speed
+                })
+    
+                button.style.color = "gray" //color when desactive
+            })
+        }
 
         header.appendChild(button) //Add a node to the end of the header list
     }
