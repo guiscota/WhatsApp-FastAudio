@@ -1,12 +1,10 @@
-
 //As the "header" class does not load when entering the page, it is necessary to use a check, and search until you find
 const interval = setInterval(() => {
 
     const header = document.querySelector("._3auIg") //Where the button will be
 
     if (header) { //Check if found the header
-        clearInterval(interval) //stop verification
-        localStorage.setItem('status', 0) //initialize with the function disabled
+        clearInterval(interval) //stop verification        
 
         const button = document.createElement("Button") //Create a button
         button.innerHTML = "1.5x" //This button will display "1.5x"
@@ -14,19 +12,19 @@ const interval = setInterval(() => {
 
         button.addEventListener("click", () => { //Button click event
 
-            if (localStorage.getItem('status') === 0) {
-                localStorage.setItem('status', 1) //Defines status activate
-
+            if (typeof localStorage.getItem('status') !== 'undefined') {
                 button.style.color = "#01DF01" //color when active                
 
                 velocity = 1.5 //Define a velocidade da reprodução
+
+                localStorage.setItem('status', 1) //Defines status activate
             }
             else {
-                localStorage.setItem('status', 0) //Defines status desactive
+                button.style.color = "gray" //color when desactive 000 / 2
 
-                button.style.color = "gray" //color when desactive 
+                velocity = 1 //Define a velocidade da reprodução
 
-                velocity = 1 //Define a velocidade da reprodução        
+                localStorage.removeItem('status') //Defines status desactive
             }
 
             const audios = document.querySelectorAll("audio"); //Select all áudios on the page
