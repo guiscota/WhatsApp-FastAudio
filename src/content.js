@@ -16,7 +16,7 @@ const interval = setInterval(() => {
                 button.classList.remove("TimeButtonOff");
                 button.classList.add("TimeButtonOn"); //color when active                
 
-                velocity = 3; //Define a velocidade da reprodução
+                velocity = 1.5; //Define a velocidade da reprodução
 
                 sessionStorage.setItem('status', 'On');
             }
