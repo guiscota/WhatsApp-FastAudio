@@ -10,23 +10,46 @@ const interval = setInterval(() => {
         button.innerHTML = "1.5x"; //This button will display "1.5x"
         button.classList.add("TimeButtonOff"); //Defines button class
 
+        var count = sessionStorage.setItem('count', 1);
+        
         button.addEventListener("click", () => { //Button click event
 
-            if (button.classList.contains("TimeButtonOff")) {
+            count = sessionStorage.getItem('count');
+            
+            if(count == 1){
                 button.classList.remove("TimeButtonOff");
                 button.classList.add("TimeButtonOn"); //color when active                
 
-                velocity = 1.5; //Define a velocidade da reprodução
+                velocity = 1.5; //Set a playback speed
 
                 sessionStorage.setItem('status', 'On');
+                sessionStorage.setItem('count', 2);
             }
-            else {
+            
+            if(count == 2){
+                button.innerHTML = "2x"; //This button will display "2x"
+                
+                velocity = 2; //Set a playback speed
+                
+                sessionStorage.setItem('count', 3);
+            }
+            
+            if(count == 3){
+                button.innerHTML = "2.5x"; //This button will display "2x"
+                
+                velocity = 2.5; //Set a playback speed
+                
+                sessionStorage.setItem('count', 4);
+            }
+            
+            if(count == 4){
                 button.classList.remove("TimeButtonOn");
                 button.classList.add("TimeButtonOff"); //color when active                
 
-                velocity = 1; //Define a velocidade da reprodução
+                velocity = 1; //Set a playback speed
 
                 sessionStorage.removeItem('status');
+                sessionStorage.setItem('count', 1);
             }
 
             const audios = document.querySelectorAll("audio"); //Select all áudios on the page
